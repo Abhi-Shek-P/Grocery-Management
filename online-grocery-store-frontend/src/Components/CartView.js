@@ -12,7 +12,6 @@ const CartView = (props) => {
 
     const url_cart_update = URL_PATH+"/cart/update"
     const url_cart_remove = URL_PATH+"/cart/delete"
-    const url_image = URL_PATH+"/product/image"
 
     const header = {
         headers: {
@@ -160,7 +159,7 @@ const CartView = (props) => {
                                                     <span className="vertical-aligner"></span>
                                                     {
                                                                 item.selectedProduct.imageName &&
-                                                                <img src={url_image + `/${item.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`${item.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !item.selectedProduct.imageName &&

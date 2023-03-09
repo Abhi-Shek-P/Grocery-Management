@@ -11,7 +11,7 @@ const CustomerOrdersScreen = (props) => {
 
     const url_fetch_orders = URL_PATH+"/order/customer/all"
     const url_cart_fetch = URL_PATH+"/cart/all"
-    const url_image = URL_PATH+"/product/image"
+    
     const header = {
         headers:{
             "Content-Type" : "application/json",
@@ -73,7 +73,7 @@ const CustomerOrdersScreen = (props) => {
                                                             <span className="vertical-aligner"></span>
                                                             {
                                                                 detail.selectedProduct.imageName &&
-                                                                <img src={url_image + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !detail.selectedProduct.imageName &&
