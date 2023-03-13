@@ -10,7 +10,7 @@ import { URL_PATH } from '../../Constants/Url'
 const ViewAllOrdersScreen = (props) => {
     const url_fetch_orders = URL_PATH+"/order/all"
     const url_assign_order = URL_PATH+"/order/update"
-    const url_image = URL_PATH+"/product/image"
+    
 
     const role = useSelector(store=>store.userSignIn.response.data.role)
 
@@ -80,7 +80,7 @@ const ViewAllOrdersScreen = (props) => {
                                                             <span className="vertical-aligner"></span>
                                                             {
                                                                 detail.selectedProduct.imageName &&
-                                                                <img src={url_image + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !detail.selectedProduct.imageName &&

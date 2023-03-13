@@ -209,7 +209,7 @@ const CartView = (props) => {
                                 <div onClick={()=>{if(document.getElementById("cartView")){document.getElementById("cartView").style.width = "0%";}}}>
                                     <span className="float-start">Proceed to check out</span> 
                                     <span className="float-end">&#8377; {cartTotal}</span>  
-                                </div>
+                                </div>  
                             </div>
                         </div>
                     </div>

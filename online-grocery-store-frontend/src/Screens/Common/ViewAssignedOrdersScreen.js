@@ -12,7 +12,7 @@ const ViewAssignedOrdersScreen = (props) => {
 
     const url_fetch_orders = URL_PATH+"/order/assigned"
     const url_change_status = URL_PATH+"/order/update-status"
-    const url_image = URL_PATH+"/product/image"
+    
 
     const role = useSelector(store=>store.userSignIn.response.data.role)
 
@@ -83,7 +83,7 @@ const ViewAssignedOrdersScreen = (props) => {
                                                             <span className="vertical-aligner"></span>
                                                             {
                                                                 detail.selectedProduct.imageName &&
-                                                                <img src={url_image + `/${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
+                                                                <img src={`${detail.selectedProduct.imageName}`} alt="product" className="img-fluid img-thumbnail"/>
                                                             }
                                                             {
                                                                 !detail.selectedProduct.imageName &&
